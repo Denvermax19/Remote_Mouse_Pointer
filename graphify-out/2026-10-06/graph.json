@@ -771,7 +771,7 @@
       "node_kind": "heading",
       "norm_label": "current architecture (main.cpp, build 8)",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L37"
+      "source_location": "L28"
     },
     {
       "id": "session_log_custom_title_bar",
@@ -783,7 +783,7 @@
       "node_kind": "heading",
       "norm_label": "custom title bar",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L58"
+      "source_location": "L49"
     },
     {
       "id": "session_log_diagnostic_tool_only_if_a_re_run_is_needed",
@@ -795,7 +795,7 @@
       "node_kind": "heading",
       "norm_label": "diagnostic tool (only if a re-run is needed)",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L117"
+      "source_location": "L106"
     },
     {
       "id": "session_log_history_collapsed_do_not_re_derive",
@@ -807,7 +807,19 @@
       "node_kind": "heading",
       "norm_label": "history (collapsed \u2014 do not re-derive)",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L124"
+      "source_location": "L113"
+    },
+    {
+      "id": "session_log_next_steps_build_8_verification",
+      "label": "Next steps (BUILD 8 verification)",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "next steps (build 8 verification)",
+      "source_file": "SESSION_LOG.md",
+      "source_location": "L94"
     },
     {
       "id": "session_log_open_items",
@@ -819,7 +831,7 @@
       "node_kind": "heading",
       "norm_label": "open items",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L139"
+      "source_location": "L128"
     },
     {
       "id": "session_log_other_windows_threads",
@@ -831,7 +843,7 @@
       "node_kind": "heading",
       "norm_label": "other windows / threads",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L89"
+      "source_location": "L80"
     },
     {
       "id": "session_log_project_rules",
@@ -843,7 +855,7 @@
       "node_kind": "heading",
       "norm_label": "project rules",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L9"
+      "source_location": "L7"
     },
     {
       "id": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
@@ -858,18 +870,6 @@
       "source_location": "L1"
     },
     {
-      "id": "session_log_status_next_steps",
-      "label": "Status & next steps",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "status & next steps",
-      "source_file": "SESSION_LOG.md",
-      "source_location": "L103"
-    },
-    {
       "id": "session_log_window",
       "label": "Window",
       "_origin": "ast",
@@ -879,7 +879,7 @@
       "node_kind": "heading",
       "norm_label": "window",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L39"
+      "source_location": "L30"
     },
     {
       "id": "point",
@@ -3826,7 +3826,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L39",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -3837,7 +3837,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L58",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -3848,18 +3848,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L89",
-      "weight": 1.0
-    },
-    {
-      "source": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
-      "target": "session_log_status_next_steps",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "SESSION_LOG.md",
-      "source_location": "L103",
+      "source_location": "L80",
       "weight": 1.0
     },
     {
@@ -3870,7 +3859,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L117",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -3881,7 +3870,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L124",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -3892,7 +3881,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L139",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -3903,7 +3892,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L37",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -3914,7 +3903,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L9",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
+      "target": "session_log_next_steps_build_8_verification",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SESSION_LOG.md",
+      "source_location": "L94",
       "weight": 1.0
     }
   ],

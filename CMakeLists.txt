@@ -1,4 +1,12 @@
 cmake_minimum_required(VERSION 3.20)
+
+# Ship as ONE self-contained exe: static C runtime (no msvcp140/vcruntime140/
+# ucrtbase DLLs) and static vcpkg libs (no zlib1.dll etc.). The resulting
+# ScreenPointer.exe depends only on Windows system DLLs. Both settings must
+# come before project() so the vcpkg toolchain sees the triplet.
+set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
+set(VCPKG_TARGET_TRIPLET "x86-windows-static" CACHE STRING "vcpkg triplet" FORCE)
+
 project(ScreenPointer)
 
 set(CMAKE_CXX_STANDARD 17)

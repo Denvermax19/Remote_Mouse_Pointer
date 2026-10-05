@@ -4,6 +4,19 @@
   "graph": {},
   "nodes": [
     {
+      "id": "click_diag_findctx",
+      "label": "FindCtx",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ReportCaptionState",
+      "file_type": "code",
+      "norm_label": "findctx",
+      "source_file": "click_diag.cpp",
+      "source_location": "L255"
+    },
+    {
       "id": "click_diag_clickrec",
       "label": "ClickRec",
       "_callable": true,
@@ -17,77 +30,84 @@
       "source_location": "L53"
     },
     {
-      "id": "click_diag_findctx",
-      "label": "FindCtx",
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "HWND",
-      "file_type": "code",
-      "norm_label": "findctx",
-      "source_file": "click_diag.cpp",
-      "source_location": "L255"
-    },
-    {
-      "id": "click_diag_decodeex",
-      "label": "DecodeEx()",
+      "id": "test_main",
+      "label": "main()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "click_diag.cpp",
+      "community_name": "WindowProc",
       "file_type": "code",
-      "norm_label": "decodeex()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L142"
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "RenderTargetProperties",
+            "receiver_type": "D2D1",
+            "lang": "cpp",
+            "line": "L79"
+          },
+          {
+            "callee": "PixelFormat",
+            "receiver_type": "D2D1",
+            "lang": "cpp",
+            "line": "L81"
+          },
+          {
+            "callee": "HwndRenderTargetProperties",
+            "receiver_type": "D2D1",
+            "lang": "cpp",
+            "line": "L83"
+          },
+          {
+            "callee": "SizeU",
+            "receiver_type": "D2D1",
+            "lang": "cpp",
+            "line": "L83"
+          },
+          {
+            "callee": "ColorF",
+            "receiver_type": "D2D1",
+            "lang": "cpp",
+            "line": "L86"
+          }
+        ]
+      },
+      "norm_label": "main()",
+      "source_file": "test.cpp",
+      "source_location": "L55"
     },
     {
-      "id": "click_diag_decodest",
-      "label": "DecodeSt()",
+      "id": "test_windowproc",
+      "label": "WindowProc()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "click_diag.cpp",
+      "community_name": "WindowProc",
       "file_type": "code",
-      "norm_label": "decodest()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L162"
-    },
-    {
-      "id": "click_diag_getclassw",
-      "label": "GetClassW()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "click_diag.cpp",
-      "file_type": "code",
-      "norm_label": "getclassw()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L120"
-    },
-    {
-      "id": "click_diag_logwindow",
-      "label": "LogWindow()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "click_diag.cpp",
-      "file_type": "code",
-      "norm_label": "logwindow()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L200"
-    },
-    {
-      "id": "click_diag_workerproc",
-      "label": "WorkerProc()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "click_diag.cpp",
-      "file_type": "code",
-      "norm_label": "workerproc()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L593"
+      "metadata": {
+        "unresolved_calls": [
+          {
+            "callee": "ColorF",
+            "receiver_type": "D2D1",
+            "lang": "cpp",
+            "line": "L22"
+          },
+          {
+            "callee": "Ellipse",
+            "receiver_type": "D2D1",
+            "lang": "cpp",
+            "line": "L26"
+          },
+          {
+            "callee": "Point2F",
+            "receiver_type": "D2D1",
+            "lang": "cpp",
+            "line": "L26"
+          }
+        ]
+      },
+      "norm_label": "windowproc()",
+      "source_file": "test.cpp",
+      "source_location": "L18"
     },
     {
       "id": "main_applydonutregion",
@@ -99,7 +119,7 @@
       "file_type": "code",
       "norm_label": "applydonutregion()",
       "source_file": "main.cpp",
-      "source_location": "L148"
+      "source_location": "L150"
     },
     {
       "id": "main_captionbuttons",
@@ -111,7 +131,7 @@
       "file_type": "code",
       "norm_label": "captionbuttons()",
       "source_file": "main.cpp",
-      "source_location": "L95"
+      "source_location": "L97"
     },
     {
       "id": "main_drawglyph",
@@ -127,19 +147,19 @@
             "callee": "Point2F",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L125"
+            "line": "L127"
           },
           {
             "callee": "RectF",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L129"
+            "line": "L131"
           }
         ]
       },
       "norm_label": "drawglyph()",
       "source_file": "main.cpp",
-      "source_location": "L117"
+      "source_location": "L119"
     },
     {
       "id": "main_handlebands",
@@ -151,7 +171,7 @@
       "file_type": "code",
       "norm_label": "handlebands()",
       "source_file": "main.cpp",
-      "source_location": "L80"
+      "source_location": "L82"
     },
     {
       "id": "main_hitcaptionbutton",
@@ -163,7 +183,7 @@
       "file_type": "code",
       "norm_label": "hitcaptionbutton()",
       "source_file": "main.cpp",
-      "source_location": "L107"
+      "source_location": "L109"
     },
     {
       "id": "main_isdotwnd",
@@ -175,7 +195,7 @@
       "file_type": "code",
       "norm_label": "isdotwnd()",
       "source_file": "main.cpp",
-      "source_location": "L72"
+      "source_location": "L74"
     },
     {
       "id": "main_main",
@@ -191,37 +211,37 @@
             "callee": "RenderTargetProperties",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L561"
+            "line": "L578"
           },
           {
             "callee": "PixelFormat",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L561"
+            "line": "L578"
           },
           {
             "callee": "HwndRenderTargetProperties",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L562"
+            "line": "L579"
           },
           {
             "callee": "SizeU",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L562"
+            "line": "L579"
           },
           {
             "callee": "ColorF",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L574"
+            "line": "L583"
           }
         ]
       },
       "norm_label": "main()",
       "source_file": "main.cpp",
-      "source_location": "L469"
+      "source_location": "L486"
     },
     {
       "id": "main_startwebsocket",
@@ -233,7 +253,7 @@
       "file_type": "code",
       "norm_label": "startwebsocket()",
       "source_file": "main.cpp",
-      "source_location": "L433"
+      "source_location": "L450"
     },
     {
       "id": "main_windowproc",
@@ -249,121 +269,97 @@
             "callee": "SizeU",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L264"
+            "line": "L266"
           },
           {
             "callee": "ColorF",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L278"
+            "line": "L280"
           },
           {
             "callee": "RectF",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L284"
+            "line": "L286"
           },
           {
             "callee": "Ellipse",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L338"
+            "line": "L331"
           },
           {
             "callee": "Point2F",
             "receiver_type": "D2D1",
             "lang": "cpp",
-            "line": "L338"
+            "line": "L331"
           }
         ]
       },
       "norm_label": "windowproc()",
       "source_file": "main.cpp",
-      "source_location": "L181"
+      "source_location": "L183"
     },
     {
-      "id": "click_diag_gettitlew",
-      "label": "GetTitleW()",
+      "id": "click_diag_findbysub",
+      "label": "FindBySub()",
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "OnClick",
+      "community_name": "ReportCaptionState",
       "file_type": "code",
-      "norm_label": "gettitlew()",
+      "norm_label": "findbysub()",
       "source_file": "click_diag.cpp",
-      "source_location": "L110"
+      "source_location": "L264"
     },
     {
-      "id": "click_diag_logstack",
-      "label": "LogStack()",
+      "id": "click_diag_main",
+      "label": "main()",
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "OnClick",
+      "community_name": "ReportCaptionState",
       "file_type": "code",
-      "norm_label": "logstack()",
+      "norm_label": "main()",
       "source_file": "click_diag.cpp",
-      "source_location": "L230"
+      "source_location": "L646"
     },
     {
-      "id": "click_diag_onclick",
-      "label": "OnClick()",
+      "id": "click_diag_reapplycolorkey",
+      "label": "ReapplyColorKey()",
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "OnClick",
+      "community_name": "ReportCaptionState",
       "file_type": "code",
-      "norm_label": "onclick()",
+      "norm_label": "reapplycolorkey()",
       "source_file": "click_diag.cpp",
-      "source_location": "L416"
+      "source_location": "L390"
     },
     {
-      "id": "click_diag_probehittest",
-      "label": "ProbeHitTest()",
+      "id": "click_diag_reportcaptionstate",
+      "label": "ReportCaptionState()",
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "OnClick",
+      "community_name": "ReportCaptionState",
       "file_type": "code",
-      "norm_label": "probehittest()",
+      "norm_label": "reportcaptionstate()",
       "source_file": "click_diag.cpp",
-      "source_location": "L334"
+      "source_location": "L366"
     },
     {
-      "id": "click_diag_probepoint",
-      "label": "ProbePoint()",
+      "id": "click_diag_togglelayered",
+      "label": "ToggleLayered()",
       "_callable": true,
       "_origin": "ast",
       "community": 3,
-      "community_name": "OnClick",
+      "community_name": "ReportCaptionState",
       "file_type": "code",
-      "norm_label": "probepoint()",
+      "norm_label": "togglelayered()",
       "source_file": "click_diag.cpp",
-      "source_location": "L348"
-    },
-    {
-      "id": "click_diag_ptrstr",
-      "label": "PtrStr()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "OnClick",
-      "file_type": "code",
-      "norm_label": "ptrstr()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L81"
-    },
-    {
-      "id": "click_diag_ctrlhandler",
-      "label": "CtrlHandler()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "HWND",
-      "file_type": "code",
-      "norm_label": "ctrlhandler()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L639"
+      "source_location": "L401"
     },
     {
       "id": "click_diag_findproc",
@@ -371,11 +367,23 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "findproc()",
       "source_file": "click_diag.cpp",
       "source_location": "L257"
+    },
+    {
+      "id": "click_diag_gettitlew",
+      "label": "GetTitleW()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "GetTitleW",
+      "file_type": "code",
+      "norm_label": "gettitlew()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L110"
     },
     {
       "id": "click_diag_hookproc",
@@ -383,7 +391,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "hookproc()",
       "source_file": "click_diag.cpp",
@@ -395,7 +403,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "htname()",
       "source_file": "click_diag.cpp",
@@ -407,7 +415,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "msgwndproc()",
       "source_file": "click_diag.cpp",
@@ -419,163 +427,91 @@
       "_callable": true,
       "_origin": "ast",
       "community": 6,
-      "community_name": "Log",
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "boolstr()",
       "source_file": "click_diag.cpp",
       "source_location": "L103"
     },
     {
-      "id": "click_diag_findbysub",
-      "label": "FindBySub()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Log",
-      "file_type": "code",
-      "norm_label": "findbysub()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L264"
-    },
-    {
-      "id": "click_diag_log",
-      "label": "Log()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Log",
-      "file_type": "code",
-      "norm_label": "log()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L61"
-    },
-    {
-      "id": "click_diag_logoverlays",
-      "label": "LogOverlays()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Log",
-      "file_type": "code",
-      "norm_label": "logoverlays()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L271"
-    },
-    {
-      "id": "click_diag_main",
-      "label": "main()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Log",
-      "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L646"
-    },
-    {
-      "id": "click_diag_reapplycolorkey",
-      "label": "ReapplyColorKey()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Log",
-      "file_type": "code",
-      "norm_label": "reapplycolorkey()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L390"
-    },
-    {
-      "id": "click_diag_reportcaptionstate",
-      "label": "ReportCaptionState()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Log",
-      "file_type": "code",
-      "norm_label": "reportcaptionstate()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L366"
-    },
-    {
-      "id": "click_diag_togglelayered",
-      "label": "ToggleLayered()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 6,
-      "community_name": "Log",
-      "file_type": "code",
-      "norm_label": "togglelayered()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L401"
-    },
-    {
-      "id": "click_diag_contains",
-      "label": "Contains()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "RectStr",
-      "file_type": "code",
-      "norm_label": "contains()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L226"
-    },
-    {
-      "id": "click_diag_rectstr",
-      "label": "RectStr()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "RectStr",
-      "file_type": "code",
-      "norm_label": "rectstr()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L97"
-    },
-    {
-      "id": "click_diag_rgbstr",
-      "label": "RgbStr()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "RgbStr",
-      "file_type": "code",
-      "norm_label": "rgbstr()",
-      "source_file": "click_diag.cpp",
-      "source_location": "L326"
-    },
-    {
       "id": "click_diag_clip",
       "label": "Clip()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
-      "community_name": "wstring",
+      "community": 6,
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "clip()",
       "source_file": "click_diag.cpp",
       "source_location": "L105"
     },
     {
+      "id": "click_diag_ctrlhandler",
+      "label": "CtrlHandler()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "click_diag.cpp",
+      "file_type": "code",
+      "norm_label": "ctrlhandler()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L639"
+    },
+    {
+      "id": "click_diag_decodeex",
+      "label": "DecodeEx()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "click_diag.cpp",
+      "file_type": "code",
+      "norm_label": "decodeex()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L142"
+    },
+    {
       "id": "click_diag_decodeguiflags",
       "label": "DecodeGuiFlags()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
-      "community_name": "wstring",
+      "community": 6,
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "decodeguiflags()",
       "source_file": "click_diag.cpp",
       "source_location": "L181"
     },
     {
+      "id": "click_diag_decodest",
+      "label": "DecodeSt()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "click_diag.cpp",
+      "file_type": "code",
+      "norm_label": "decodest()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L162"
+    },
+    {
+      "id": "click_diag_getclassw",
+      "label": "GetClassW()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "click_diag.cpp",
+      "file_type": "code",
+      "norm_label": "getclassw()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L120"
+    },
+    {
       "id": "click_diag_heartbeat",
       "label": "Heartbeat()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
-      "community_name": "wstring",
+      "community": 6,
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "heartbeat()",
       "source_file": "click_diag.cpp",
@@ -586,67 +522,244 @@
       "label": "Hex32()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
-      "community_name": "wstring",
+      "community": 6,
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "hex32()",
       "source_file": "click_diag.cpp",
       "source_location": "L90"
     },
     {
+      "id": "click_diag_logwindow",
+      "label": "LogWindow()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "click_diag.cpp",
+      "file_type": "code",
+      "norm_label": "logwindow()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L200"
+    },
+    {
       "id": "click_diag_procname",
       "label": "ProcName()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
-      "community_name": "wstring",
+      "community": 6,
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "procname()",
       "source_file": "click_diag.cpp",
       "source_location": "L126"
     },
     {
+      "id": "click_diag_rectstr",
+      "label": "RectStr()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "click_diag.cpp",
+      "file_type": "code",
+      "norm_label": "rectstr()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L97"
+    },
+    {
+      "id": "click_diag_rgbstr",
+      "label": "RgbStr()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "click_diag.cpp",
+      "file_type": "code",
+      "norm_label": "rgbstr()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L326"
+    },
+    {
       "id": "click_diag_stamp",
       "label": "Stamp()",
       "_callable": true,
       "_origin": "ast",
-      "community": 9,
-      "community_name": "wstring",
+      "community": 6,
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "stamp()",
       "source_file": "click_diag.cpp",
       "source_location": "L57"
     },
     {
-      "id": "click_diag",
-      "label": "click_diag.cpp",
+      "id": "click_diag_workerproc",
+      "label": "WorkerProc()",
+      "_callable": true,
       "_origin": "ast",
-      "community": 0,
+      "community": 6,
       "community_name": "click_diag.cpp",
       "file_type": "code",
-      "norm_label": "click_diag.cpp",
+      "norm_label": "workerproc()",
       "source_file": "click_diag.cpp",
+      "source_location": "L593"
+    },
+    {
+      "id": "click_diag_contains",
+      "label": "Contains()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "contains()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L226"
+    },
+    {
+      "id": "click_diag_log",
+      "label": "Log()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "log()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L61"
+    },
+    {
+      "id": "click_diag_logoverlays",
+      "label": "LogOverlays()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "logoverlays()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L271"
+    },
+    {
+      "id": "click_diag_logstack",
+      "label": "LogStack()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "logstack()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L230"
+    },
+    {
+      "id": "click_diag_onclick",
+      "label": "OnClick()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "onclick()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L416"
+    },
+    {
+      "id": "click_diag_probehittest",
+      "label": "ProbeHitTest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "probehittest()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L334"
+    },
+    {
+      "id": "click_diag_probepoint",
+      "label": "ProbePoint()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "probepoint()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L348"
+    },
+    {
+      "id": "click_diag_ptrstr",
+      "label": "PtrStr()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "ptrstr()",
+      "source_file": "click_diag.cpp",
+      "source_location": "L81"
+    },
+    {
+      "id": "test",
+      "label": "test.cpp",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "WindowProc",
+      "file_type": "code",
+      "norm_label": "test.cpp",
+      "source_file": "test.cpp",
       "source_location": "L1"
     },
     {
-      "id": "long_ptr",
-      "label": "LONG_PTR",
+      "id": "test_cpp_hwnd",
+      "label": "HWND",
       "_origin": "ast",
       "community": 0,
-      "community_name": "click_diag.cpp",
+      "community_name": "WindowProc",
       "file_type": "code",
-      "norm_label": "long_ptr",
+      "norm_label": "hwnd",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "lpvoid",
-      "label": "LPVOID",
+      "id": "test_cpp_lparam",
+      "label": "LPARAM",
       "_origin": "ast",
       "community": 0,
-      "community_name": "click_diag.cpp",
+      "community_name": "WindowProc",
       "file_type": "code",
-      "norm_label": "lpvoid",
+      "norm_label": "lparam",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "test_cpp_lresult",
+      "label": "LRESULT",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "WindowProc",
+      "file_type": "code",
+      "norm_label": "lresult",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "test_cpp_uint",
+      "label": "UINT",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "WindowProc",
+      "file_type": "code",
+      "norm_label": "uint",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "test_cpp_wparam",
+      "label": "WPARAM",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "WindowProc",
+      "file_type": "code",
+      "norm_label": "wparam",
       "source_file": "",
       "source_location": ""
     },
@@ -754,7 +867,7 @@
       "label": "SESSION_LOG.md",
       "_origin": "ast",
       "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "session_log.md",
@@ -762,133 +875,154 @@
       "source_location": "L1"
     },
     {
-      "id": "session_log_current_architecture_main_cpp_build_8",
-      "label": "Current architecture (main.cpp, BUILD 8)",
+      "id": "session_log_bug_as_reported_by_user",
+      "label": "Bug as reported by user",
       "_origin": "ast",
       "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "current architecture (main.cpp, build 8)",
+      "norm_label": "bug as reported by user",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L37"
+      "source_location": "L19"
     },
     {
-      "id": "session_log_custom_title_bar",
-      "label": "Custom title bar",
+      "id": "session_log_definitive_results_from_build_click_diag_log_txt",
+      "label": "Definitive results from `build/click_diag_log.txt`",
       "_origin": "ast",
       "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "custom title bar",
+      "norm_label": "definitive results from `build/click_diag_log.txt`",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L58"
+      "source_location": "L27"
     },
     {
       "id": "session_log_diagnostic_tool_only_if_a_re_run_is_needed",
       "label": "Diagnostic tool (only if a re-run is needed)",
       "_origin": "ast",
       "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "diagnostic tool (only if a re-run is needed)",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L117"
+      "source_location": "L123"
     },
     {
-      "id": "session_log_history_collapsed_do_not_re_derive",
-      "label": "History (collapsed \u2014 do not re-derive)",
+      "id": "session_log_fix_implemented_option_c_donut_region_no_colour_key_build_1_verified_working",
+      "label": "Fix implemented \u2014 Option C, donut region + no colour key (BUILD 1 verified working)",
       "_origin": "ast",
       "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "history (collapsed \u2014 do not re-derive)",
+      "norm_label": "fix implemented \u2014 option c, donut region + no colour key (build 1 verified working)",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L124"
+      "source_location": "L80"
     },
     {
-      "id": "session_log_open_items",
-      "label": "Open items",
+      "id": "session_log_next_steps",
+      "label": "Next steps",
       "_origin": "ast",
       "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "open items",
+      "norm_label": "next steps",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L139"
+      "source_location": "L113"
     },
     {
-      "id": "session_log_other_windows_threads",
-      "label": "Other windows / threads",
+      "id": "session_log_option_a_client_drag_strip_built_tested_by_user_failed",
+      "label": "Option A (client drag strip) \u2014 built, tested by user, FAILED",
       "_origin": "ast",
       "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "other windows / threads",
+      "norm_label": "option a (client drag strip) \u2014 built, tested by user, failed",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L89"
+      "source_location": "L67"
     },
     {
-      "id": "session_log_project_rules",
-      "label": "Project rules",
+      "id": "session_log_other_open_items_unchanged",
+      "label": "Other open items (unchanged)",
       "_origin": "ast",
       "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "project rules",
+      "norm_label": "other open items (unchanged)",
       "source_file": "SESSION_LOG.md",
-      "source_location": "L9"
+      "source_location": "L130"
     },
     {
-      "id": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
-      "label": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "id": "session_log_project",
+      "label": "Project",
       "_origin": "ast",
       "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "session log \u2014 screenpointer (teacher overlay / custom title bar)",
+      "norm_label": "project",
+      "source_file": "SESSION_LOG.md",
+      "source_location": "L6"
+    },
+    {
+      "id": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
+      "label": "Session log \u2014 ScreenPointer teacher title bar won't drag",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "Session log \u2014 ScreenPointer teacher title bar won't drag",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "session log \u2014 screenpointer teacher title bar won't drag",
       "source_file": "SESSION_LOG.md",
       "source_location": "L1"
     },
     {
-      "id": "session_log_status_next_steps",
-      "label": "Status & next steps",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "status & next steps",
-      "source_file": "SESSION_LOG.md",
-      "source_location": "L103"
-    },
-    {
-      "id": "session_log_window",
-      "label": "Window",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "Session log \u2014 ScreenPointer (teacher overlay / custom title bar)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "window",
-      "source_file": "SESSION_LOG.md",
-      "source_location": "L39"
-    },
-    {
-      "id": "point",
-      "label": "POINT",
+      "id": "click_diag_findctx_out",
+      "label": "out",
       "_origin": "ast",
       "community": 3,
-      "community_name": "OnClick",
+      "community_name": "ReportCaptionState",
       "file_type": "code",
-      "norm_label": "point",
+      "norm_label": "out",
+      "source_file": "click_diag.cpp",
+      "source_location": "L255"
+    },
+    {
+      "id": "click_diag_findctx_sub",
+      "label": "sub",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ReportCaptionState",
+      "file_type": "code",
+      "norm_label": "sub",
+      "source_file": "click_diag.cpp",
+      "source_location": "L255"
+    },
+    {
+      "id": "vector",
+      "label": "vector",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ReportCaptionState",
+      "file_type": "code",
+      "norm_label": "vector",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "wchar_t",
+      "label": "wchar_t",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ReportCaptionState",
+      "file_type": "code",
+      "norm_label": "wchar_t",
       "source_file": "",
       "source_location": ""
     },
@@ -952,7 +1086,7 @@
       "label": "BOOL",
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "bool",
       "source_file": "",
@@ -963,7 +1097,7 @@
       "label": "HWND",
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "hwnd",
       "source_file": "",
@@ -974,7 +1108,7 @@
       "label": "LPARAM",
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "lparam",
       "source_file": "",
@@ -985,7 +1119,7 @@
       "label": "LRESULT",
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "lresult",
       "source_file": "",
@@ -996,7 +1130,7 @@
       "label": "UINT",
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "uint",
       "source_file": "",
@@ -1007,73 +1141,29 @@
       "label": "WPARAM",
       "_origin": "ast",
       "community": 5,
-      "community_name": "HWND",
+      "community_name": "GetTitleW",
       "file_type": "code",
       "norm_label": "wparam",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "click_diag_findctx_out",
-      "label": "out",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "HWND",
-      "file_type": "code",
-      "norm_label": "out",
-      "source_file": "click_diag.cpp",
-      "source_location": "L255"
-    },
-    {
-      "id": "click_diag_findctx_sub",
-      "label": "sub",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "HWND",
-      "file_type": "code",
-      "norm_label": "sub",
-      "source_file": "click_diag.cpp",
-      "source_location": "L255"
-    },
-    {
-      "id": "vector",
-      "label": "vector",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "HWND",
-      "file_type": "code",
-      "norm_label": "vector",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "wchar_t",
-      "label": "wchar_t",
+      "id": "click_diag",
+      "label": "click_diag.cpp",
       "_origin": "ast",
       "community": 6,
-      "community_name": "Log",
+      "community_name": "click_diag.cpp",
       "file_type": "code",
-      "norm_label": "wchar_t",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "click_diag_cpp_rect",
-      "label": "RECT",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "RectStr",
-      "file_type": "code",
-      "norm_label": "rect",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "click_diag.cpp",
+      "source_file": "click_diag.cpp",
+      "source_location": "L1"
     },
     {
       "id": "colorref",
       "label": "COLORREF",
       "_origin": "ast",
-      "community": 8,
-      "community_name": "RgbStr",
+      "community": 6,
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "colorref",
       "source_file": "",
@@ -1083,10 +1173,32 @@
       "id": "dword",
       "label": "DWORD",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "wstring",
+      "community": 6,
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "dword",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "long_ptr",
+      "label": "LONG_PTR",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "click_diag.cpp",
+      "file_type": "code",
+      "norm_label": "long_ptr",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "lpvoid",
+      "label": "LPVOID",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "click_diag.cpp",
+      "file_type": "code",
+      "norm_label": "lpvoid",
       "source_file": "",
       "source_location": ""
     },
@@ -1094,10 +1206,32 @@
       "id": "wstring",
       "label": "wstring",
       "_origin": "ast",
-      "community": 9,
-      "community_name": "wstring",
+      "community": 6,
+      "community_name": "click_diag.cpp",
       "file_type": "code",
       "norm_label": "wstring",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "click_diag_cpp_rect",
+      "label": "RECT",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "rect",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "point",
+      "label": "POINT",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "OnClick",
+      "file_type": "code",
+      "norm_label": "point",
       "source_file": "",
       "source_location": ""
     }
@@ -2156,7 +2290,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L162",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
@@ -2168,7 +2302,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L110",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -2180,7 +2314,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L594",
+      "source_location": "L605",
       "weight": 1.0
     },
     {
@@ -2192,7 +2326,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L599",
+      "source_location": "L610",
       "weight": 1.0
     },
     {
@@ -2204,7 +2338,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L623",
+      "source_location": "L634",
       "weight": 1.0
     },
     {
@@ -2216,7 +2350,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L183",
+      "source_location": "L185",
       "weight": 1.0
     },
     {
@@ -2228,7 +2362,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L239",
+      "source_location": "L241",
       "weight": 1.0
     },
     {
@@ -2240,7 +2374,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L241",
+      "source_location": "L243",
       "weight": 1.0
     },
     {
@@ -2252,7 +2386,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L258",
+      "source_location": "L260",
       "weight": 1.0
     },
     {
@@ -2264,7 +2398,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L298",
+      "source_location": "L300",
       "weight": 1.0
     },
     {
@@ -2276,7 +2410,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "main.cpp",
-      "source_location": "L322",
+      "source_location": "L315",
       "weight": 1.0
     },
     {
@@ -2972,7 +3106,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L148",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
@@ -2984,7 +3118,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L95",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -2996,7 +3130,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L117",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -3008,7 +3142,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L117",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -3020,7 +3154,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L72",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -3032,7 +3166,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L433",
+      "source_location": "L450",
       "weight": 1.0
     },
     {
@@ -3044,7 +3178,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L181",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -3056,7 +3190,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L181",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -3068,7 +3202,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L181",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -3080,7 +3214,55 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "main.cpp",
-      "source_location": "L181",
+      "source_location": "L183",
+      "weight": 1.0
+    },
+    {
+      "source": "test_windowproc",
+      "target": "test_cpp_hwnd",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "test.cpp",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "test_windowproc",
+      "target": "test_cpp_lparam",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "test.cpp",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "test_windowproc",
+      "target": "test_cpp_uint",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "test.cpp",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "test_windowproc",
+      "target": "test_cpp_wparam",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "test.cpp",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -3320,7 +3502,19 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "main.cpp",
-      "source_location": "L181",
+      "source_location": "L183",
+      "weight": 1.0
+    },
+    {
+      "source": "test_windowproc",
+      "target": "test_cpp_lresult",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "test.cpp",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -3716,7 +3910,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "main.cpp",
-      "source_location": "L107",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -3727,7 +3921,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "main.cpp",
-      "source_location": "L117",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -3738,7 +3932,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "main.cpp",
-      "source_location": "L148",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
@@ -3749,7 +3943,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "main.cpp",
-      "source_location": "L181",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -3760,7 +3954,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "main.cpp",
-      "source_location": "L433",
+      "source_location": "L450",
       "weight": 1.0
     },
     {
@@ -3771,7 +3965,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "main.cpp",
-      "source_location": "L469",
+      "source_location": "L486",
       "weight": 1.0
     },
     {
@@ -3782,7 +3976,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "main.cpp",
-      "source_location": "L72",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -3793,7 +3987,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "main.cpp",
-      "source_location": "L80",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -3804,12 +3998,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "main.cpp",
-      "source_location": "L95",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
       "source": "session_log",
-      "target": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
+      "target": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -3819,102 +4013,113 @@
       "weight": 1.0
     },
     {
-      "source": "session_log_current_architecture_main_cpp_build_8",
-      "target": "session_log_window",
+      "source": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
+      "target": "session_log_next_steps",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L39",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
-      "source": "session_log_current_architecture_main_cpp_build_8",
-      "target": "session_log_custom_title_bar",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "SESSION_LOG.md",
-      "source_location": "L58",
-      "weight": 1.0
-    },
-    {
-      "source": "session_log_current_architecture_main_cpp_build_8",
-      "target": "session_log_other_windows_threads",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "SESSION_LOG.md",
-      "source_location": "L89",
-      "weight": 1.0
-    },
-    {
-      "source": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
-      "target": "session_log_status_next_steps",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "SESSION_LOG.md",
-      "source_location": "L103",
-      "weight": 1.0
-    },
-    {
-      "source": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
+      "source": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
       "target": "session_log_diagnostic_tool_only_if_a_re_run_is_needed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L117",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
-      "source": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
-      "target": "session_log_history_collapsed_do_not_re_derive",
+      "source": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
+      "target": "session_log_other_open_items_unchanged",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L124",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
-      "source": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
-      "target": "session_log_open_items",
+      "source": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
+      "target": "session_log_bug_as_reported_by_user",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L139",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
-      "source": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
-      "target": "session_log_current_architecture_main_cpp_build_8",
+      "source": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
+      "target": "session_log_definitive_results_from_build_click_diag_log_txt",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L37",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
-      "source": "session_log_session_log_screenpointer_teacher_overlay_custom_title_bar",
-      "target": "session_log_project_rules",
+      "source": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
+      "target": "session_log_project",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "SESSION_LOG.md",
-      "source_location": "L9",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
+      "target": "session_log_option_a_client_drag_strip_built_tested_by_user_failed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SESSION_LOG.md",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "session_log_session_log_screenpointer_teacher_title_bar_won_t_drag",
+      "target": "session_log_fix_implemented_option_c_donut_region_no_colour_key_build_1_verified_working",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "SESSION_LOG.md",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "test",
+      "target": "test_windowproc",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test.cpp",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "test",
+      "target": "test_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "test.cpp",
+      "source_location": "L55",
       "weight": 1.0
     }
   ],

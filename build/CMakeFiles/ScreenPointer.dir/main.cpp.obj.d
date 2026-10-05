@@ -274,6 +274,7 @@ C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/pshpack8.h
 C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/poppack.h
 C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/pshpack1.h
 C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/shared/poppack.h
+C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/um/dwrite.h
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/iostream
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/yvals_core.h
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/xkeycheck.h
@@ -393,66 +394,66 @@ C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/__msvc_minmax.hpp
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/vector
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/xbit_ops.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocket.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXProgressCallback.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocket.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXProgressCallback.h
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/functional
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/unordered_map
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/xhash
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/list
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/xnode_handle.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXSocketTLSOptions.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketCloseConstants.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketErrorInfo.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketHttpHeaders.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXCancellationRequest.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXStrCaseCompare.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXSocketTLSOptions.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketCloseConstants.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketErrorInfo.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketHttpHeaders.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXCancellationRequest.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXStrCaseCompare.h
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/map
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/xtree
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketMessage.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketCloseInfo.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketMessageType.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketOpenInfo.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketPerMessageDeflateOptions.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketSendData.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketSendInfo.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketTransport.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketHandshake.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXHttp.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXSocket.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketMessage.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketCloseInfo.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketMessageType.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketOpenInfo.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketPerMessageDeflateOptions.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketSendData.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketSendInfo.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketTransport.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketHandshake.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXHttp.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXSocket.h
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/mutex
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXSelectInterrupt.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketInitResult.h
-C:/vcpkg/installed/x86-windows/include/ixwebsocket/IXWebSocketPerMessageDeflate.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXSelectInterrupt.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketInitResult.h
+C:/vcpkg/installed/x86-windows-static/include/ixwebsocket/IXWebSocketPerMessageDeflate.h
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/chrono
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/xfilesystem_abi.h
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/condition_variable
-C:/vcpkg/installed/x86-windows/include/nlohmann/json.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/adl_serializer.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/abi_macros.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/conversions/from_json.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/json.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/adl_serializer.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/abi_macros.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/conversions/from_json.hpp
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/array
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/forward_list
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/valarray
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/exceptions.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/value_t.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/macro_scope.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/meta/detected.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/meta/void_t.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/thirdparty/hedley/hedley.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/exceptions.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/value_t.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/macro_scope.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/meta/detected.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/meta/void_t.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/thirdparty/hedley/hedley.hpp
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/version
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/cassert
 C:/Program Files (x86)/Windows Kits/10/include/10.0.26100.0/ucrt/assert.h
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/string_escape.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/input/position_t.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/meta/cpp_future.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/meta/type_traits.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/iterators/iterator_traits.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/meta/call_std/begin.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/meta/call_std/end.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/json_fwd.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/string_concat.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/meta/identity_tag.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/meta/std_fs.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/string_escape.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/input/position_t.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/meta/cpp_future.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/meta/type_traits.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/iterators/iterator_traits.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/meta/call_std/begin.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/meta/call_std/end.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/json_fwd.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/string_concat.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/meta/identity_tag.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/meta/std_fs.hpp
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/filesystem
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/iomanip
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/xlocmon
@@ -462,31 +463,31 @@ C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/xlocmes
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/optional
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/xsmf_control.h
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/conversions/to_json.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/iterators/iteration_proxy.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/string_utils.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/byte_container_with_subtype.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/hash.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/input/binary_reader.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/input/input_adapters.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/conversions/to_json.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/iterators/iteration_proxy.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/string_utils.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/byte_container_with_subtype.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/hash.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/input/binary_reader.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/input/input_adapters.hpp
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/numeric
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/input/json_sax.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/input/lexer.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/meta/is_sax.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/input/parser.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/iterators/internal_iterator.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/iterators/primitive_iterator.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/iterators/iter_impl.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/iterators/json_reverse_iterator.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/json_custom_base_class.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/json_pointer.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/json_ref.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/output/binary_writer.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/output/output_adapters.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/output/serializer.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/conversions/to_chars.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/ordered_map.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/input/json_sax.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/input/lexer.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/meta/is_sax.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/input/parser.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/iterators/internal_iterator.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/iterators/primitive_iterator.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/iterators/iter_impl.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/iterators/json_reverse_iterator.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/json_custom_base_class.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/json_pointer.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/json_ref.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/output/binary_writer.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/output/output_adapters.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/output/serializer.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/conversions/to_chars.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/ordered_map.hpp
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/any
 C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/include/string_view
-C:/vcpkg/installed/x86-windows/include/nlohmann/detail/macro_unscope.hpp
-C:/vcpkg/installed/x86-windows/include/nlohmann/thirdparty/hedley/hedley_undef.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/detail/macro_unscope.hpp
+C:/vcpkg/installed/x86-windows-static/include/nlohmann/thirdparty/hedley/hedley_undef.hpp

@@ -1,7 +1,7 @@
 # Graph Report - Remote_Mouse_Pointer  (2026-10-06)
 
 ## Corpus Check
-- 3 files · ~7,980 words
+- 3 files · ~7,911 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -65,7 +65,7 @@ Nodes (17): ID2D1RenderTarget, ApplyDonutRegion(), CaptionButtons(), HWND, LPARA
 
 ### Community 2 - "Session log — ScreenPointer (teacher overlay / custom title bar)"
 Cohesion: 0.18
-Nodes (10): Current architecture (main.cpp, BUILD 8), Custom title bar, Diagnostic tool (only if a re-run is needed), History (collapsed — do not re-derive), Open items, Other windows / threads, Project rules, Session log — ScreenPointer (teacher overlay / custom title bar) (+2 more)
+Nodes (10): Current architecture (main.cpp, BUILD 8), Custom title bar, Diagnostic tool (only if a re-run is needed), History (collapsed — do not re-derive), Next steps (BUILD 8 verification), Open items, Other windows / threads, Project rules (+2 more)
 
 ### Community 3 - "OnClick"
 Cohesion: 0.67

@@ -1,174 +1,146 @@
-# Session log — ScreenPointer title-bar / move / resize bug
+# Session log — ScreenPointer (teacher overlay / custom title bar)
 
-Read this first. It replaces re-reading the whole codebase.
+**Read this file instead of re-deriving history or re-reading code comments.**
+Old eras (colour-key bug, ClickDiag runs, hover attempts) are collapsed to a
+summary at the bottom — only the current design matters.
+Current = **BUILD 8, user-verified working** (UI + all functionality, Release
+single-exe build).
 
-## The bug (user report)
+## Project rules
 
-On the **teacher** overlay window of `ScreenPointer`:
+- Root `C:\Users\lette\C_Projects\Remote_Mouse_Pointer`; targets `ScreenPointer`
+  (`main.cpp`) and `ClickDiag` (`click_diag.cpp`). `test.cpp` (old red-dot
+  prototype) deleted — never in CMake. Old `build\click_diag_log.txt` deleted.
+- User runs `cmake --build build` — **agent must NOT build** (AGENTS.md).
+  After edits: balance check + `graphify update .` + append to this log.
+- Console app (`main()`, `std::cout` diagnostics work).
+- `CMakeLists.txt` forces **static CRT + `x86-windows-static` triplet**.
+  **Proven build sequence** (developer/x86 Native Tools prompt — NMake needs
+  `cl` on PATH; the `rmdir` is mandatory after any triplet change):
 
-1. The window can be moved and resized normally the first time.
-2. After the first move + **resize**, the title bar stops reacting to mouse input —
-   the window can no longer be grabbed to move or resize.
-3. Separately, after a **right-click** on the title bar the caption text greys out.
+  ```bat
+  C:\vcpkg\vcpkg install ixwebsocket:x86-windows-static nlohmann-json:x86-windows-static
+  cd /d C:\Users\lette\C_Projects\Remote_Mouse_Pointer
+  rmdir /s /q build
+  cmake -B build -G "NMake Makefiles" -DCMAKE_BUILD_TYPE=Release -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
+  cmake --build build
+  ```
 
-Symptom persists for the rest of the session.
+  Why the fresh dir: classic vcpkg (no `vcpkg.json`) never auto-installs on a
+  triplet change, and a stale cache keeps `ixwebsocket_DIR` pinned to old
+  dynamic libs → LNK2038 `RuntimeLibrary` mismatch (/MT vs /MD). Ran once,
+  **verified**: `build\ScreenPointer.exe` ≈ 1.0 MB, imports only Windows
+  system DLLs (d2d1/dwrite/ws2_32/bcrypt/…) — copy that ONE file to any
+  Windows PC; no redist, no DLLs. First run: SmartScreen "More info → Run
+  anyway" + firewall allow.
 
-## Project facts
+## Current architecture (main.cpp, BUILD 8)
 
-- Root: `C:\Users\lette\C_Projects\Remote_Mouse_Pointer`
-- Targets: `ScreenPointer` (main.cpp, line 9 of CMakeLists) and `ClickDiag` (click_diag.cpp, line 22)
-- Build: `cmake --build build` — **the user builds manually; the agent must NOT run any build/compile command** (AGENTS.md).
-- `graphify-out/` knowledge graph exists; run `graphify update .` after code edits.
+### Window
 
-### Window creation (main.cpp)
+- Teacher: `WS_EX_TOPMOST` + `WS_OVERLAPPEDWINDOW`, **no `WS_EX_LAYERED`**;
+  `WM_NCCALCSIZE → 0` (client == window rect, no system caption/frame).
+  `WM_GETMINMAXINFO` clamps to monitor work area (else maximized covers the
+  taskbar), min track 260×160. `wc.style = CS_DBLCLKS` → double-click title
+  bar maximizes.
+- Click-through interior via donut region: `ApplyDonutRegion()` =
+  `SetWindowRgn(full rect minus hole)`; hole = client inset by `strip` on top,
+  `grip` elsewhere; `IsZoomed → grip = 0` (no inert ring when maximized).
+  Re-applied on creation and every `WM_SIZE`. Region pixels are simply not
+  part of the window, so they never hit-test — nothing to go stale (this
+  killed the original colour-key bug class; the re-apply sweep is gone too).
+- `HandleBands(w,h,strip,grip)` = single source of truth shared by WM_PAINT,
+  WM_NCHITTEST and the region, so they can never disagree:
+  `grip = GRIP = 6` (min 2; `w/12`/`h/12` if tiny),
+  `strip = TITLE_H = 36` (≤ `h/3`, ≥ `2*grip`).
+  Other constants: `BTN_W=40`, `BTN_H=24`, `DOT_SIZE=24`.
 
-```cpp
-CreateWindowExW(WS_EX_TOPMOST | WS_EX_LAYERED, ..., WS_OVERLAPPEDWINDOW, ...)
-SetLayeredWindowAttributes(hwnd, RGB(0,0,0), 0, LWA_COLORKEY);   // teacher
-SetLayeredWindowAttributes(hwnd, 0, 255, LWA_ALPHA);             // student
-```
+### Custom title bar
 
-- Teacher: interior `Clear()` to opaque black = fully colour-key transparent,
-  so clicks pass through to the app underneath. Standard title bar drawn by
-  `DefWindowProc` (no custom `WM_NCHITTEST` in the app).
-- Student (reference impl): `LWA_ALPHA` + `DwmExtendFrameIntoClientArea({-1,-1,-1,-1})`,
-  D2D clears to alpha 0. Clicks do **not** pass through it.
-- `WindowProc` (main.cpp:38) handles only `WM_ERASEBKGND`, `WM_SIZE`, `WM_PAINT`,
-  `WM_TIMER`, `WM_DESTROY`, else `DefWindowProcW`.
-- `inputThread` polls `GetClientRect`/`ClientToScreen` cross-thread every 16 ms.
+- Paint order: chrome fill (whole client; donut clips it to the ring) → title
+  band (`titleBgBrush`, `strip` px) → DirectWrite caption text (Segoe UI 13 pt,
+  rect `8 … BTN_MIN.left-8`) → 3 static glyphs → 2 px blue border
+  `RectF(1, strip-1, w-1, h-1)` — top edge flush under the band; its middle is
+  over the hole and clipped away by design.
+- Buttons: `CaptionButtons()` right-aligned with `off = grip` (clears the
+  border). Glyphs always drawn by `DrawGlyph`: **white** `glyphBrush` (1,1,1),
+  2 px strokes, `s=6`; max shows restore double-square while zoomed.
+  **No hover — abandoned by user's choice** (Windows Terminal reference:
+  static glyphs; see History).
+- Click path (works): `WM_NCHITTEST` → button rect = `HTCLIENT`; `y < grip`
+  (not zoomed) = `HTTOP*`; rest of title = `HTCAPTION` (drag); edges/corners =
+  resize; zoomed = `HTCLIENT`. `WM_LBUTTONDOWN` → `HitCaptionButton` →
+  `WM_SYSCOMMAND` (SC_MINIMIZE / SC_MAXIMIZE|SC_RESTORE / SC_CLOSE).
+- **DPI (BUILD 8 — do not regress):** process is
+  `PER_MONITOR_AWARE_V2`, so `GetClientRect`/`SetWindowRgn`/cursor maths are
+  PHYSICAL pixels (display at 125%, `AppliedDPI=120`), but
+  `CreateHwndRenderTarget` defaults to monitor DPI and scales every D2D
+  coordinate ×1.25 before rasterising. **`renderTarget->SetDpi(96.0f, 96.0f)`
+  right after creation makes 1 DIP = 1 client pixel** — paint, region and
+  hit-test then share one coordinate space (WM_SIZE already resizes the RT to
+  the client, so the present mapping is identity). Without it the button rects
+  (x 697..817) render at 871..1021 px, past the 817 px client edge → glyphs
+  and hover highlights were invisible in ALL builds 3–7 while raw-pixel clicks
+  kept working. That was the whole hover mystery. First paint prints once:
+  `[UI] dpi=96 client=… strip=… grip=… btns=…`.
+- Gotcha: `#undef DrawText` **before** `#include <d2d1.h>` — the `windows.h`
+  macro would rewrite `ID2D1RenderTarget::DrawText` into `DrawTextW`.
 
-## Diagnostic tool
+### Other windows / threads
 
-`click_diag.cpp` → `build\ClickDiag.exe`, writes **`build\click_diag_log.txt`**
-(user calls it "click_log.txt" — same file, only written by ClickDiag).
+- Student: `WS_EX_TRANSPARENT|WS_EX_LAYERED` + `LWA_ALPHA` +
+  `DwmExtendFrameIntoClientArea({-1,-1,-1,-1})`, not click-through; red dot =
+  `FillEllipse(dotX, dotY, 15)` at network coords (pixel-exact thanks to
+  `SetDpi(96)`).
+- Ctrl red-dot preview (teacher): separate GDI popup `g_dotWnd`, class
+  `ScreenPointerDot`, 24 px, elliptic region, solid red `FillRect` — the donut
+  hole would clip anything drawn on the teacher itself. `IsDotWnd()` keys on
+  the class name, not the global (null mid-creation). Shown/hidden/positioned
+  from the 16 ms `WM_TIMER`; destroyed from the teacher's `WM_DESTROY`.
+- Input transmitter thread and the dot logic trim `strip` off the client rect
+  before mapping to the student's screen (title bar ≠ overlay area).
 
-Run order: start `ClickDiag.exe` first → then `ScreenPointer.exe` → reproduce →
-**F9** quits ClickDiag → user sends the log.
+## Status & next steps
 
-It logs, for every mouse-down: injection flag, foreground before/after,
-`WindowFromPoint`, full z-order stack at the point, overlay rects, then decisive
-probes on the teacher window:
+- **All app issues resolved and user-verified (this session):** title bar UI,
+  glyphs, clicks, drag/resize, donut region, red-dot preview, plus the
+  BUILD 8 DPI fix. First paint still prints the one-shot
+  `[UI] dpi=96 client=… strip=… grip=… btns=…` line — useful to ask for from
+  a student's console screenshot when debugging remotely.
+- **Remaining (no code work pending):** classroom rollout of the single
+  `ScreenPointer.exe`. WebSocket URL must be reachable from every laptop
+  (same LAN; if the server runs on the teacher's machine, allow its port
+  inbound in Windows Firewall and make sure the AP doesn't isolate clients).
+  ClickDiag is dev-only — never ships to students.
+- Known code TODOs are the Open items below; nothing else.
 
-- `WM_NCHITTEST` sent **to the teacher itself** (`SendMessageTimeoutW`) — what the
-  window's own answer is for that screen point.
-- `WindowFromPoint` at caption-left / caption-right / client-centre / just-above.
-- Screen RGB (`GetPixel`) at each probe.
-- Overlay thread `GetGUIThreadInfo` flags/focus/capture/active at the click instant.
-- Per-second heartbeat: `ui_responds` (`SendMessageTimeout WM_NULL`), `gui` flags,
-  enabled/visible/rect/style/exstyle, `-- state CHANGED --` dumps.
-- Hook→log latency (always 0 ms, so snapshots are at the click instant).
+## Diagnostic tool (only if a re-run is needed)
 
-Experiment hotkeys added this session (all leave the window in its normal
-colour-keyed state): **F10** = report caption hittability, **F11** = re-apply
-`SetLayeredWindowAttributes(LWA_COLORKEY)`, **F12** = drop/re-add `WS_EX_LAYERED`
-+ re-apply colour key.
+`click_diag.cpp` → `build\ClickDiag.exe` writes `build\click_diag_log.txt`.
+Run ClickDiag first → ScreenPointer → reproduce → **F9** quits.
+**F10** = caption hittability report. F11/F12 answered the old colour-key
+questions — the colour key is gone, don't repeat them.
 
-`GetCapture()` is per-thread and always NULL in ClickDiag — use
-`gi.hwndCapture` instead.
+## History (collapsed — do not re-derive)
 
-## What the logs proved (runs 5 and 6)
+- **Original bug (closed):** `WS_EX_LAYERED` + `LWA_COLORKEY` hit-test shape
+  went stale after the first move/resize/maximize → caption/resize/buttons all
+  fell through to the window behind; the `g_reapplyPending` sweep and manual
+  F11/F12 provably never repaired it (9 ClickDiag runs, 284 clicks). Fix =
+  BUILD 1 "Option C": drop the colour key entirely, use the donut region.
+  All ClickDiag findings are historical only.
+- **Option A (client drag strip):** failed — same colour-key class of
+  problem; removed.
+- **Hover attempts (BUILD 3→6):** message-driven → client-sync → paint-time →
+  `ScreenToClient` — none ever lit the buttons. The real cause was the DPI
+  clipping described above, but per the user's decision (BUILD 7) hover was
+  dropped entirely: glyphs are static and always visible.
 
-Latest run occupies lines **1936–3928** of `build\click_diag_log.txt` (3928 total,
-lines 1–1935 are stale runs). Run 6: teacher hwnd `001F0686`, Terminal `001407E6`.
+## Open items
 
-**Ruled out:**
-
-| Hypothesis | Evidence |
-|---|---|
-| Hung UI thread | `ui_responds=YES` on every heartbeat |
-| Stuck menu / move-size loop | `gui=(none)` after the drag ends |
-| Capture leak | `hwndCapture=0` throughout |
-| Disabled / hidden | `en=YES vis=YES` |
-| Style or exstyle change | `style=0x14CF0000`, `ex=0x00080108` identical before and after |
-| Window region set | `GetWindowRgn` = `ERROR/none` |
-| DPI mismatch | same process/monitor |
-| Worker latency | hook→log always 0 ms |
-
-**Confirmed mechanism (the contradiction that pins it):**
-
-The teacher window is at z-order **#1** (`GetTopWindow(NULL)`), visible, enabled,
-has no region, and **its own `WM_NCHITTEST` correctly answers `HTCAPTION` /
-`HTTOPLEFT` / `HTCLIENT`** for points inside it — yet `WindowFromPoint` at those
-same points returns the window *behind* it (WindowsTerminal, or Chrome in run 5),
-and the real mouse click goes there too (foreground switches to Terminal).
-
-The teacher **is visibly painting its own caption**: probe at caption-left gives
-screen RGB `(242,243,245)` light gray, while a probe 40 px *above* the window
-top gives `(15,17,26)` = Terminal. So the surface content is correct and the
-caption is drawn, but Windows' layered colour-key hit-test shape no longer covers
-the non-client area.
-
-**Break point in run 6:**
-
-- Click #13 at `+66109ms`, point `(347,310)` → `HTTOPLEFT`, `gui=INMOVESIZE` — **works**.
-- `caption-hit-test NO at (250,288)` at **`+66797ms`, still `gui=INMOVESIZE`** — breaks
-  *during* the first **resize** (a plain move before it did not break it).
-- Resize ends `+68875ms`, rect `(80,213)-(1185,907)`.
-- From click #14 (`+71984ms`) onward every click lands on the Terminal; teacher
-  never re-activates (`focus=active=0`) until the app is closed `~+138609ms`.
-
-## Conclusion
-
-Windows keeps a layered window's colour-key hit-test shape stale after a size /
-activation change: the window still paints, still reports `HTCAPTION` for its own
-title bar, but the input system treats the non-client area as transparent and
-passes clicks through to the window underneath. This matches a documented
-`SetLayeredWindowAttributes` defect (MS Q&A: *"the non-client area remains
-unaffected initially but passes mouse clicks after [a state change]"*).
-`WindowFromPoint`'s normal `HTTRANSPARENT` rule does **not** explain it, because
-Raymond Chen notes it does not even send `WM_NCHITTEST` cross-process — and our
-own `WM_NCHITTEST` answer was correct anyway.
-
-## Changes made this session (NOT yet built or verified)
-
-### main.cpp
-
-- `main.cpp:41-53` — new block at the top of `WindowProc`: for the **teacher only**,
-  re-apply `SetLayeredWindowAttributes(hwnd, RGB(0,0,0), 0, LWA_COLORKEY)` on
-  `WM_EXITSIZEMOVE`, `WM_NCACTIVATE`, `WM_DISPLAYCHANGE`, `WM_SIZE` with
-  `SIZE_MAXIMIZED`, and restore-from-minimize (flag `wasMinimized`, main.cpp:34).
-  This forces Windows to rebuild the stale hit-test shape.
-- `main.cpp:67` — null-guard `renderTarget` at the top of `WM_PAINT`.
-
-### click_diag.cpp (707 → 767 lines)
-
-- `ReportCaptionState(tag)` — `WindowFromPoint` on the teacher caption, right now.
-- `ReapplyColorKey(tag)` / `ToggleLayered(tag)` — the F11 / F12 experiments.
-- Hotkey dispatch in the main loop + banner help lines.
-- Already present from earlier rounds: `ClickRec.at`, `HtName`, `RgbStr`,
-  `ProbeHitTest`, `ProbePoint`, `GetTopWindow` identity, `GetWindowRgn`, four
-  probe points, per-second caption-hit-test flip line, `#pragma comment(lib,"gdi32.lib")`.
-
-Both files verified balanced (main.cpp 36/36 braces, 164/164 parens;
-click_diag.cpp 137/137, 619/619). `graphify update .` has been run.
-
-## Next steps for this session
-
-1. Have the user run `cmake --build build` (both targets).
-2. Kill the stray `StudentOverlay` process first (a second ScreenPointer instance
-   is always running and adds noise to the log).
-3. Reproduce: move the teacher, **resize** it, then click its title bar.
-   - If it still breaks → press **F11**, then **F12**, then **F9** and read the log.
-     F11 succeeding confirms re-applying is the fix; only F12 working means the
-     `WS_EX_LAYERED` toggle is required.
-4. If the fix works, verify the right-click caption-grey symptom also cleared
-   (it should — `WM_NCACTIVATE` re-applies).
-
-### Still open / not done
-
-- Right-click on `HTCAPTION` still opens the system menu —
-  candidate: handle `WM_NCRBUTTONDOWN/UP` with `wParam==HTCAPTION`, return 0.
-- `renderTarget->EndDraw()` return value is still ignored; if it ever returns
-  `D2DERR_RECREATE_TARGET` after a resize the overlay freezes silently.
-  Candidate: on failure release and recreate the render target.
-- If re-applying does **not** fix it, the fallback is to stop using `LWA_COLORKEY`
-  for the teacher and switch to the student's approach (`LWA_ALPHA` + 
-  `DwmExtendFrameIntoClientArea({-1,-1,-1,-1})` + D2D `Clear(alpha 0)`) — but note
-  that makes the client click-through=false, i.e. clicks would no longer pass
-  through the overlay to the app underneath. Discuss with the user first.
-
-## Reference material
-
-- https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes
-- https://github.com/MicrosoftEdge/WebView2Feedback/issues/5668 — a `WS_EX_LAYERED`
-  alpha-0 window *without* `WS_EX_TRANSPARENT` still hit-tests.
+- Right-click on `HTCAPTION` opens the system menu — candidate: handle
+  `WM_NCRBUTTONDOWN/UP` with `wParam == HTCAPTION`, return 0.
+- `renderTarget->EndDraw()` return ignored; on `D2DERR_RECREATE_TARGET` after
+  a resize the overlay freezes silently → release and recreate the target.
+- Kill any stray ScreenPointer / StudentOverlay process before a test run
+  (a second instance adds noise).
