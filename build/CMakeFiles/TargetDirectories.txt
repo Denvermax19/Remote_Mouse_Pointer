@@ -1,4 +1,0 @@
-C:/Users/lette/C_Projects/Remote_Mouse_Pointer/build/CMakeFiles/ScreenPointer.dir
-C:/Users/lette/C_Projects/Remote_Mouse_Pointer/build/CMakeFiles/ClickDiag.dir
-C:/Users/lette/C_Projects/Remote_Mouse_Pointer/build/CMakeFiles/edit_cache.dir
-C:/Users/lette/C_Projects/Remote_Mouse_Pointer/build/CMakeFiles/rebuild_cache.dir
